@@ -12,6 +12,7 @@ URL: https://github.com/evdi/evdi
 License: MIT
 Group: System/Libraries
 BuildRequires: make
+BuildRequires: pkgconfig(libdrm)
 BuildRequires: pkgconfig(python3)
 BuildRequires: python%{pyver}dist(pybind11)
 

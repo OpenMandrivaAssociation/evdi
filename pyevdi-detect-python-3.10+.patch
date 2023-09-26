@@ -1,0 +1,12 @@
+diff -up evdi-1.14.1/pyevdi/Makefile.omv~ evdi-1.14.1/pyevdi/Makefile
+--- evdi-1.14.1/pyevdi/Makefile.omv~	2023-09-26 14:48:33.631191151 +0200
++++ evdi-1.14.1/pyevdi/Makefile	2023-09-26 14:52:27.481530373 +0200
+@@ -39,7 +39,7 @@ tests:
+ 	LD_LIBRARY_PATH=../library python3 -m pytest test/
+ 
+ 
+-LIBDIR ?= /usr/lib/python$$(python3 -c "import sys; print (sys.version[:3])")/lib-dynload
++LIBDIR ?= /usr/lib/python$$(python3 -c "import sys; print (sys.version.split()[0])" |cut -d. -f1-2)/lib-dynload
+ 
+ 
+ install:

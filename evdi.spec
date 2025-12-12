@@ -4,7 +4,7 @@
 
 Name: evdi
 Version: 1.14.1
-Release: 1
+Release: 2
 Source0: https://github.com/DisplayLink/evdi/archive/refs/tags/v%{version}.tar.gz
 Patch0: pyevdi-detect-python-3.10+.patch
 Summary: Extensible Virtual Display Interface

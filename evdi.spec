@@ -73,7 +73,7 @@ It is needed primarily for DisplayLink driver.
 %prep
 %autosetup -p1
 # distutils was removed. sysconfig.get_path('platlib') is the same directory.
-sed -i 's|from distutils.sysconfig import get_python_lib; print(get_python_lib())|import sysconfig; print(sysconfig.get_path("platlib"))|' pyevdi/Makefile
+sed -i 's|from distutils.sysconfig import get_python_lib; print(get_python_lib())|import sysconfig; print(sysconfig.get_path('"'"'platlib'"'"'))|' pyevdi/Makefile
 
 %build
 CFLAGS="%{optflags} -I../module" %make_build -C library
